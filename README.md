@@ -6,5 +6,7 @@ A shell script to run a bowtie, kraken and krona pipeline for metagenomics analy
 
 Prerequisites:
 1. Bowtie2 2.2.6
+
 2. Kraken 0.10.5
+
 3. Krona 
