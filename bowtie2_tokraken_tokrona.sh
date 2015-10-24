@@ -1,8 +1,6 @@
 exec &> $(date +%y%m%d).error.txt
 time
 
-<<"COMMENT"
-
 library="null"
 for i in *.fastq
 do
@@ -22,10 +20,8 @@ do
     fi;
 done
 
-COMMENT
-
-#cat *.1 >> unaligned_1.fastq
-#cat *.2 >> unaligned_2.fastq
+cat *.1 >> unaligned_1.fastq
+cat *.2 >> unaligned_2.fastq
 
 #this command will take the unaligned reads from the bowtie2 alignment against the human genomes and output the classified and unclassified fastq reads against minikrakendb and the classified output for krona 
 cmd="/home/ketienne3/kraken/kraken --db /class/ahcg/2015/clinicalmetagenomics/2015Fall/minikraken_20141208 --paired unaligned_1.fastq unaligned_2.fastq --classified-out minikrakenclass.fastq --unclassified-out otherunclass_minikraken.fastq --output minikraken.out"
