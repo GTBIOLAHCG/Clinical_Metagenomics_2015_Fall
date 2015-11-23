@@ -1,10 +1,10 @@
 ################# QIIME PIPELINE FOR CLINICAL METAGENOMICS ANALYSIS ON CYCTIC FIBROSIS PATIENTS ###############
-#SCIPTNAME  :	bowtie2_toqiime.sh
-#VERSION    :	1.1
-#DATE	    :	November 24th 2015
-#DEVELOPERS :	Clinical Metagenomics Group
-#ADVISOR    :	Dr. Fredrik Vannberg
-#INSTITUTE  :   Georgia Institute of Technology, Atlanta
+SCIPTNAME  :	bowtie2_toqiime.sh
+VERSION    :	1.1
+DATE	    :	November 24th 2015
+DEVELOPERS :	Clinical Metagenomics Group
+ADVISOR    :	Dr. Fredrik Vannberg
+INSTITUTE  :   Georgia Institute of Technology, Atlanta
 ###############################################################################################################
 
 REQUIREMENTS: 1. Clinical data in fastq format generated from Illumina Hi-Seq placed in a working directory
