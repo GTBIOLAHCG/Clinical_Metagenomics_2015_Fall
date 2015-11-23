@@ -5,7 +5,6 @@
 * DEVELOPERS :	Clinical Metagenomics Group
 * ADVISOR    :	Dr. Fredrik Vannberg
 * INSTITUTE  :   Georgia Institute of Technology, Atlanta
-###############################################################################################################
 
 REQUIREMENTS: 1. Clinical data in fastq format generated from Illumina Hi-Seq placed in a working directory
 
@@ -24,8 +23,6 @@ REQUIREMENTS: 1. Clinical data in fastq format generated from Illumina Hi-Seq pl
 ADD-ONS	    : The pipeline is designed to download the fungal ITS database and greengenes bacterial and arch-
 	      eal 16S databases and to prepare the mapping and parameter files required by qiime to run.
 
-###############################################################################################################
-
 # WORKFLOW 
 
 * STEP1	    : Downloads the fngal ITS database and unzip the folder
@@ -36,4 +33,3 @@ ADD-ONS	    : The pipeline is designed to download the fungal ITS database and g
 * STEP6       : Pickes otus of bacterial and archeal taxa from the sequences failed to align with fungi in step4
 * STEP7       : Summarizes the output from step6 and creates plots in .html formt
 
-###############################################################################################################
