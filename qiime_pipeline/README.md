@@ -5,7 +5,7 @@
 * DEVELOPERS :	Clinical Metagenomics Group
 * ADVISOR    :	Dr. Fredrik Vannberg
 * INSTITUTE  :   Georgia Institute of Technology, Atlanta
-
+```
 REQUIREMENTS: 1. Clinical data in fastq format generated from Illumina Hi-Seq placed in a working directory
 
 	      2. Install latest version of Qiime from http://qiime.org/ and create an environmental variable 
@@ -19,7 +19,7 @@ REQUIREMENTS: 1. Clinical data in fastq format generated from Illumina Hi-Seq pl
 
 	      5. Download the latest version of human reference genome with bowtie2 indices from NCBI and pl-
 		 ace the files on /human_genome folder in working directory.
-
+```
 ADD-ONS	    : The pipeline is designed to download the fungal ITS database and greengenes bacterial and arch-
 	      eal 16S databases and to prepare the mapping and parameter files required by qiime to run.
 
