@@ -1,5 +1,5 @@
 # Clinical_Metagenomics_2015_Fall
 
-## Kraken Pipeline
+  1. Kraken Pipeline
 
-## Qiime Pipeline
+  2. Qiime Pipeline
