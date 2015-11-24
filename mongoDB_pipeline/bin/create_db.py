@@ -129,12 +129,12 @@ def plot_result(result,sample_name):
 
 
 def main():
-    ## Get the name of the sample
-    if(sys.argv[1][-1] == "/"):
-        sample_name = sys.argv[1].split("/")[-2]
-    else:
-        sample_name = sys.argv[1].split("/")[-1]
+    
+    ## First argument is the name of the kc file
 
+    ## Second argument is the sample name 
+
+    sample_name = sys.argv[2]
 
     ## Create a connection
     client = MongoClient()
