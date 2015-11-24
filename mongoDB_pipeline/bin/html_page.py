@@ -3,9 +3,9 @@
 #Usage: ./html_page.py [json] > out.html
 
 import json
-import operator
 import sys
 import re
+from collections import Counter
 
 if(len(sys.argv)<2):
     sys.exit("Usage: ./html_page.py [json] > out.html")
@@ -15,7 +15,9 @@ temp_file=open("temp.html", "r")
 
 line = jfile.readline()
 jlist=json.loads(line)
-sorted_x=sorted(jlist.items(), key=operator.itemgetter(1), reverse=True)
+#sorted_x=sorted(jlist.items(), key=operator.itemgetter(1), reverse=True)
+c=Counter(jlist)
+sorted_x=c.most_common()
 jfile.close()
 
 color_list=["#2484c1","#0c6197","#4daa4b","#90c469","#daca61","#e4a14b","#e98125","#cb2121","#830909","#923e99"]
