@@ -17,21 +17,36 @@ Kraken:
 
 **2. MongoDB Pipeline**:
 
-Easy to use pipeline for querrying input fastqs for fungal reads. 
+Easy to use pipeline for querrying input fastqs for fungal reads.
+
 Dependencies :
+
 1. Python3
+
 2. MongoDB : https://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+
 3. PyMongo : pip install pymongo
+
 4. Install anaconda to get additional libraries which are used : https://www.continuum.io/downloads
+
 5. KAnalyze : http://sourceforge.net/projects/kanalyze/
 
+
 Note : Currently unaligned fastqs are required to run the program, these can be generated using the Kraken Pipeline
-Usage : run the shell script mongodb_wrapper.sh inside the bin folder 
+
+Usage : run the shell script mongodb_wrapper.sh inside the bin folder
+
         <path to mongodb_wrapper.sh> <input_folder containing unaligned fastqs> 
 
-Output : Will create a folder with name as input_folder.outputs containing : 
+
+Output : Will create a folder with name as input_folder.outputs containing :
+
          1. A folder MongoDB containing the output html file, out.html
+         
          2. json result file
+         
          3. kc file
-         4. Fasta files contnaining kmers for the top 10 species hit in the database
+         
+         4. Fasta files containing kmers for the top 10 species hit in the database
+         
          5. A bar graph png 
