@@ -39,7 +39,7 @@ Usage : run the shell script mongodb_wrapper.sh inside the bin folder
         <path to mongodb_wrapper.sh> <input_folder containing unaligned fastqs> 
 
 
-Output : Will create a folder <input_folder.outputs> containing :
+Output : Will create a directory input_folder.outputs containing :
 
          1. A folder MongoDB containing the output html file, out.html
          
