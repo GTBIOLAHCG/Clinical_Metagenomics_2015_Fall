@@ -72,7 +72,7 @@ def create_fastas(fungal_db,result,sample_name):
     """ Creates Fastas for the top 10 fungal species
     """
 
-    c = return_result_hash(result)
+    c = return_result_hash(result,False)
     FASTA_HANDLE = {}
     fasta_seq_counter = {}
 
@@ -91,11 +91,11 @@ def create_fastas(fungal_db,result,sample_name):
 def output_json(result,sample_name):
     """ Create a json output of the result
     """
-    c = return_result_hash(result)
-    with open(sample_name+'_result.json','w') as  JSON_HANDLE:
+    c = return_result_hash(result,True)
+    with open(sample_name+'.result.json','w') as  JSON_HANDLE:
         json.dump(c,JSON_HANDLE)
 
-def return_result_hash(result):
+def return_result_hash(result,flag=True):
     """ Result is an array of species names
     """
     ## Create a counter dictionary from the result array 
@@ -104,13 +104,16 @@ def return_result_hash(result):
     #sorted_c = sorted(c.items(),key=operator.itemgetter(1))
     sorted_c = c.most_common()
     
-    return sorted_c
+    if(flag == True):
+        return c
+    else:
+        return sorted_c
 
 def plot_result(result,sample_name):
     """ Plots a bar graph of the result
     """
 
-    sorted_c = return_result_hash(result)
+    sorted_c = return_result_hash(result,False)
     #### SIMPLE PLOTTING ####
     temp = []
     labels = []
@@ -135,7 +138,8 @@ def main():
     ## Second argument is the sample name 
 
     sample_name = sys.argv[2]
-
+    
+    print ("Creating Connection to the MongoDB Database....\n")
     ## Create a connection
     client = MongoClient()
     ## Switch to the database 
@@ -144,17 +148,19 @@ def main():
     ## Create the database
     #insert_data(fungal_db)
 
+    print ("Running The Query....\n")
     ## Query the database
     result = run_query(fungal_db)
 
-    ## Create the fastas
-    
+    print ("Outputing The Json....")
     ## Output the json
     output_json(result,sample_name)
 
+    print ("Creating The Plots....")
     ## Output the plot
     plot_result(result,sample_name)
 
+    print ("Creating The Fastas....")
     ## Create fastas for the top results (query would need to be run again)
     create_fastas(fungal_db,result,sample_name)
 
