@@ -40,5 +40,9 @@ mv $script_directory/*.fa $sample_name.outputs
 mv $script_directory/*.json $sample_name.outputs
 mv $script_directory/*.kc $sample_name.outputs
 mv $script_directory/*.png $sample_name.outputs
- 
+cp $script_directory/MongoDB -r $sample_name.outputs
+cp $script_directory/styles  -r $sample_name.outputs
+
+## Delete the output html page from bin
+rm $script_directory/MongoDB/out.html
 
