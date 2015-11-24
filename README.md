@@ -1,13 +1,12 @@
 # Clinical_Metagenomics_2015_Fall
 
-bowtie2_tokraken_tokrona.sh:
+To deliver innovative, simple, flexible, and scalable solutions for comprehensive and rapid identification of fungal pathogens in clinical samples.
 
-A shell script to run a bowtie, kraken and krona pipeline for metagenomics analysis.
+**1. Kraken Pipeline**:
 
-Prerequisites:
+A general Kraken pipeline that can be used for any metagenomics sample. This pipeline focus on fungi detection part and also involved a self defined fungal Kraken database. Input of this pipeline should be pair end fastq metagenomics reads. Output of this pipeline includes both Kraken report and Krona html report page of detected fungal reads.
 
-1. Bowtie2 2.2.6
+Kraken:
+`https://ccb.jhu.edu/software/kraken/`
 
-2. Kraken 0.10.5
-
-3. Krona 
+**2. Qiime Pipeline**:
