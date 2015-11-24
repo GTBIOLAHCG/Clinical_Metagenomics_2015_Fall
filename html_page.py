@@ -7,7 +7,7 @@ import operator
 import sys
 import re
 
-if(len(sys.argv)<=2):
+if(len(sys.argv)<2):
     sys.exit("Usage: ./html_page.py [json] > out.html")
 
 jfile=open(sys.argv[1], "r")
@@ -27,7 +27,7 @@ for spec in sorted_x:
 for line in temp_file.readlines():
     line=line.rstrip()
     if( re.search("Sample 181V3A", line) ):
-		sample_name = sys.argv[1].split(".")[0]
+        sample_name = sys.argv[1].split(".")[0]
         print("\t\t\t\"text\": \"Fungal MongoDB Query Hits -- Sample "+sample_name+"\",")
     elif( re.search("</tr>", line) ):
         print(line)
