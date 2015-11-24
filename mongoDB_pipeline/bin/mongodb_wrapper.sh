@@ -51,12 +51,12 @@ cmd="mv $sample_name.filtered.out.kc $sample_name.out.kc"
 echo $cmd
 eval $cmd
 ## Run the MongoDB query 
-cmd="python create_db.py $sample_name.out.kc $sample_name"
+cmd="python3 create_db.py $sample_name.out.kc $sample_name"
 echo $cmd
 eval $cmd 
 
 ## Run the visualization script
-cmd="python html_page.py $sample_name.result.json > ./MongoDB/out.html"
+cmd="python3 html_page.py $sample_name.result.json > ./MongoDB/out.html"
 echo $cmd
 eval $cmd
 
