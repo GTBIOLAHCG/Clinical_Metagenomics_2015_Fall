@@ -15,7 +15,7 @@ Kraken:
 
 
 
-**2. MongoDB Pipeline**:
+**3. MongoDB Pipeline**:
 
 Easy to use pipeline for querrying input fastqs for fungal reads.
 
@@ -32,14 +32,14 @@ Dependencies :
 5. KAnalyze : http://sourceforge.net/projects/kanalyze/
 
 
-Note : Currently unaligned fastqs are required to run the program, these can be generated using the Kraken Pipeline
+Note : Currently unaligned fastqs are required to run the program (after removal of human reads), these can be generated using the Kraken Pipeline
 
 Usage : run the shell script mongodb_wrapper.sh inside the bin folder
 
         <path to mongodb_wrapper.sh> <input_folder containing unaligned fastqs> 
 
 
-Output : Will create a folder with name as input_folder.outputs containing :
+Output : Will create a folder <input_folder.outputs> containing :
 
          1. A folder MongoDB containing the output html file, out.html
          
@@ -49,4 +49,4 @@ Output : Will create a folder with name as input_folder.outputs containing :
          
          4. Fasta files containing kmers for the top 10 species hit in the database
          
-         5. A bar graph png 
+         5. A bar graph (png) 
