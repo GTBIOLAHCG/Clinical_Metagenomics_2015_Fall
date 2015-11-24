@@ -50,3 +50,5 @@ Output : Will create a directory input_folder.outputs containing :
          4. Fasta files containing kmers for the top 10 species hit in the database
          
          5. A bar graph (png) 
+        
+         6. An error file : date.error.txt will be created in the directory from where you ran mongodb_wrapper.sh         
